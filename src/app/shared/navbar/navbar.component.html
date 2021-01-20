@@ -13,12 +13,11 @@
                            (keydown.enter)="search(txtQuery.value)"
                            #txtQuery>
                     <button class="my-button search-button"
-                            (click)="search(txtQuery.value)"
-                            [routerLink]="'/search'">
+                            (click)="search(txtQuery.value)">
                         <i class="bi bi-search my-icon"></i>
                     </button>
                 </div>
-                <button class="my-button cart-button" (click)="search(txtQuery.value)">
+                <button class="my-button cart-button" [routerLink]="'/cart'">
                     <i class="bi bi-cart2 cart-icon my-icon"></i>
                 </button>
                 <button class="my-button login-button">
