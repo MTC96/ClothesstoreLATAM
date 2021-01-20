@@ -1,0 +1,47 @@
+.card {
+    border: 0;
+    display: flex;
+    flex-flow: column;
+    height: 450px;
+    overflow: hidden;
+    transition: all .2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 9px 13px #b6b6b6;
+}
+
+.card img {
+    width: 100%;
+    max-width: 248px;
+    object-fit: contain;
+}
+
+.card .my-card-body {
+    display: inherit;
+    flex-flow: inherit;
+    padding: 1rem;
+    flex-grow: 1;
+}
+
+.card .my-card-body p {
+    max-height: 90px;
+    overflow: hidden;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.card .my-card-body .price-cont {
+    display: inherit;
+    flex-grow: 1;
+    margin-top: 10px;
+}
+
+.card .my-card-body h5 {
+    color: #6a10ae;
+    font-size: 25px;
+    margin-left: auto;
+    align-self: flex-end;
+}

@@ -1,0 +1,33 @@
+<div class="min-height">
+    <div class="container">
+        <h2 class="title">Carrito de compras</h2>
+        <div class="main-container">
+            <div class="table-container">
+                <table>
+                    <colgroup>
+                        <col style="width: 15%;">
+                        <col style="width: 70%;">
+                        <col style="width: 15%;">
+                    </colgroup>
+                    <tr>
+                        <th>Artículo</th>
+                        <th>Descripción</th>
+                        <th>Total: {{ total | currency : 'COP' : 'symbol-narrow' : '1.0-0'  }}</th>
+                    </tr>
+                    <tr *ngFor="let product of products">
+                        <td>
+                            <picture>
+                                <img src="{{ product.thumbnail }}" alt="">
+                            </picture>
+                        </td>
+                        <td>{{ product.title }}</td>
+                        <td>{{ product.price | currency : 'COP' : 'symbol-narrow' : '1.0-0'  }}</td>
+                    </tr>
+                </table>
+                <div class="button-container">
+                    <button class="pay-button" (click)="buy()">Pagar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

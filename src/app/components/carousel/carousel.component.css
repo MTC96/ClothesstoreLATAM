@@ -1,0 +1,70 @@
+.my-container {
+    padding: 0;
+}
+
+.my-header {
+    background-color: #000000;
+    padding: 14px;
+}
+
+.buttons-container {
+    display: flex;
+    margin-inline: 20rem;
+}
+
+@media (max-width: 991px) {
+    .buttons-container {
+        margin-inline: 5rem;
+        text-align: center;
+    }
+}
+
+.button-divider {
+    border-left: 1px solid white;
+    height: 53px;
+}
+
+button {
+    border: 0px;
+    border-radius: 4px;
+    background-color: transparent;
+    color: white;
+    font-weight: bolder;
+}
+
+button:focus {
+    outline: 0;
+}
+
+.header-button {
+    font-size: 25px;
+    padding-inline: 40px;
+    transition: all .2s;
+}
+
+@media (max-width: 991px) {
+    .header-button {
+        font-size: 20px;
+        padding-inline: 25px;
+    }
+}
+
+.header-button:hover {
+    background-color: rgb(34, 34, 34);
+}
+
+.my-carousel {
+    display: flex;
+}
+
+img {
+    width: 100%;
+    object-fit: contain;
+    margin-inline: -142px;
+}
+
+.carousel-button {
+    position: relative;
+    z-index: 5px;
+    font-size: 130px;
+}

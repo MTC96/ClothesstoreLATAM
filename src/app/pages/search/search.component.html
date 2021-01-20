@@ -1,0 +1,15 @@
+<div class="container-fluid">
+    <app-paginator (offsetOut)="loadProductsByQuery(query, $event)">
+    </app-paginator>
+    <div class="row">
+        <div class="card-cont" *ngFor="let product of products">
+            <app-card [id]="product.id"
+                      [thumbnail]="product.thumbnail"
+                      [title]="product.title"
+                      [price]="product.price | currency : 'COP' : 'symbol-narrow' : '1.0-0' ">
+            </app-card>
+        </div>
+    </div>
+    <app-paginator (offsetOut)="loadProductsByQuery(query, $event)">
+    </app-paginator>
+</div>

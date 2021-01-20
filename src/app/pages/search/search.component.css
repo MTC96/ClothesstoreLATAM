@@ -1,0 +1,17 @@
+.row {
+    margin-inline: 1.5rem;
+}
+
+.card-cont {
+    flex: 0 0 auto;
+    width: 16.6666666667%;
+    margin-inline: 20px;
+    margin-block: 25px;
+}
+
+@media (max-width: 991px) {
+    .card-cont {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}

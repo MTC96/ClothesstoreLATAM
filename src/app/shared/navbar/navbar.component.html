@@ -1,0 +1,31 @@
+<header class="topbar my-topbar">
+    <nav class="navbar navbar-expand-md">
+        <div class="container-fluid">
+            <a class="navbar-brand" [routerLink]="['/home']">
+                <img src="/assets/images/logo.svg" class="my-logo" alt="Clothes Store">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="search-container">
+                    <input class="search-input"
+                           id="search-input"
+                           type="text"
+                           placeholder="Buscar aquí producto"
+                           (keydown.enter)="search(txtQuery.value)"
+                           #txtQuery>
+                    <button class="my-button search-button"
+                            (click)="search(txtQuery.value)"
+                            [routerLink]="'/search'">
+                        <i class="bi bi-search my-icon"></i>
+                    </button>
+                </div>
+                <button class="my-button cart-button" (click)="search(txtQuery.value)">
+                    <i class="bi bi-cart2 cart-icon my-icon"></i>
+                </button>
+                <button class="my-button login-button">
+                    <i class="bi bi-person-circle login-icon my-icon"></i>
+                    Iniciar sesión
+                </button>
+            </div>
+        </div>
+    </nav>
+</header>

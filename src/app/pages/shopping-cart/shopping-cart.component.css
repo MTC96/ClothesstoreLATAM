@@ -1,0 +1,46 @@
+.min-height {
+    min-height: 79vh;
+}
+
+.title {
+    margin-block: 28px;
+}
+
+.table-container {
+    width: 70vw;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+}
+
+.pay-button {
+    margin-block: 25px;
+    margin-left: auto;
+    border: 0px;
+    border-radius: 5px;
+    padding-inline: 60px;
+    padding-block: 10px;
+    background-color: #6a10ae;
+    color: white;
+    font-weight: 700;
+    transition: all .15s;
+}
+
+.pay-button:hover{
+    background-color: #5a1291;
+}
+
+table {
+    width: 100%;
+}
+
+tr {
+    border-bottom: 1px solid lightgray;
+}

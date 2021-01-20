@@ -1,0 +1,17 @@
+.btn {
+    background-color: #6a10ae;
+    color: white;
+    font-weight: 700;
+    margin-top: 3rem;
+}
+
+.my-wrapper {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.my-wrapper .error-body {
+    margin: auto;
+    text-align: center;
+}

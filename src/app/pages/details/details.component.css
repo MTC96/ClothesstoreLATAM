@@ -1,0 +1,49 @@
+.soft-border {
+    border-left: 1px solid;
+    border-image:
+        radial-gradient(
+            circle,
+            white,
+            rgb(190, 190, 190) 70%,
+            white
+        ) 1;
+}
+
+.text.my-shipping {
+    color: rgb(79, 197, 0);
+}
+
+.min-height {
+    min-height: 82vh;
+}
+
+.height {
+    display: flex;
+    align-items: center;
+    height: 465px;
+}
+
+.img-size {
+    height: auto;
+    width: auto;
+}
+
+.img-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.my-btn {
+    background-color: #6a10ae;
+    color: white;
+    font-weight: 700;
+}
+
+button:focus {
+    box-shadow: none;
+}
+
+h2 {
+    font-weight: bolder;
+}

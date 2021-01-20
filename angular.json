@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ClothesStore"
+    }
+  },
+  "defaultProject": "ClothesStore",
+  "cli": {
+    "analytics": false
+  }
 }

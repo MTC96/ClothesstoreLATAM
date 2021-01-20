@@ -1,0 +1,11 @@
+<div class="card">
+    <img src="{{ thumbnail }}" alt="">
+    <div class="my-card-body">
+        <p>{{ title }}</p>
+        <div class="price-cont">
+            <h5>{{ price }}</h5>
+        </div>
+        <a [routerLink]="['/details', id]"
+           class="stretched-link"></a>
+    </div>
+</div>
