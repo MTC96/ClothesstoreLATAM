@@ -12,6 +12,9 @@ export class HomeComponent implements OnInit {
 
   public products: Product[] = [];
   public mw_products: Product[] = [];
+  public mw_productsLength = 0;
+  public mobileIndex = 0;
+  public isLoading = true;
 
   constructor(private productService: ProductService) { }
 
@@ -26,10 +29,12 @@ export class HomeComponent implements OnInit {
           product.thumbnail = product.thumbnail.replace('-I.', '-V.');
         });
         this.products = results;
-        for (let i = 0; i < 4; i++) {
+        this.mw_productsLength = this.products.length;
+        for (let i = 0; i < this.products.length; i) {
           const randomProduct = this.getRandomItem();
           this.mw_products.push(randomProduct);
         }
+        this.isLoading = false;
       });
   }
 
@@ -39,6 +44,16 @@ export class HomeComponent implements OnInit {
     const index = this.products.indexOf(product);
     this.products.splice(index, 1);
     return product;
+  }
+
+  changeCards(value: number) {
+    let index = this.mobileIndex += value;
+    if (index < 0) {
+      index += this.mw_productsLength;
+    } else if (index >= this.mw_productsLength) {
+      index -= this.mw_productsLength;
+    }
+    this.mobileIndex = index;
   }
 
 }

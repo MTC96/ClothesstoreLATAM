@@ -10,6 +10,9 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class NavbarComponent implements OnInit {
 
+  public showInput = false;
+  public showMobileMenu = false;
+
   constructor(private productService: ProductService,
               private router: Router) { }
 
@@ -19,6 +22,14 @@ export class NavbarComponent implements OnInit {
   search(query: string) {
     this.router.navigateByUrl('/search');
     this.productService.searchParams.query = query;
+  }
+
+  toggleInput() {
+    this.showInput = !this.showInput;
+  }
+
+  toggleMobileMenu() {
+    this.showMobileMenu = !this.showMobileMenu;
   }
 
 }

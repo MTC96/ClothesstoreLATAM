@@ -26,7 +26,7 @@ export class ProductService {
   constructor(private http: HttpClient) { }
 
   loadProducts(category: string = 'MCO1430', offset: number = 0) {
-    const url = `${ url_base }/sites/MCO/search?category=${ category }&limit=50&offset=${ offset }`;
+    const url = `${ url_base }/sites/MCO/search?category=${ category }&limit=48&offset=${ offset }`;
     return this.http.get<LoadProducts>(url);
   }
 

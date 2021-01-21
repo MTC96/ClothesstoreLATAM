@@ -14,7 +14,7 @@
     margin-block: 25px;
 }
 
-@media all and (max-width: 992px) {
+@media all and (max-width: 1090px) {
     .my-container .products-cont .card-cont {
         width: 100%;
     }

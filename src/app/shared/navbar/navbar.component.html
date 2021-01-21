@@ -1,4 +1,4 @@
-<header class="topbar my-topbar">
+<header class="topbar desktop">
     <nav class="navbar navbar-expand-md">
         <div class="container-fluid">
             <a class="navbar-brand" [routerLink]="['/home']">
@@ -27,4 +27,42 @@
             </div>
         </div>
     </nav>
+</header>
+<header class="topbar mobile">
+    <nav class="navbar navbar-expand-md">
+        <div class="container-fluid mobile-container">
+            <button class="burger-button my-button" (click)="toggleMobileMenu()">
+                <i class="bi bi-list burger-icon"></i>
+            </button>
+            <a class="navbar-brand" [routerLink]="['/home']">
+                <img src="/assets/images/logo.svg" class="my-logo" alt="Clothes Store">
+            </a>
+            <button class="my-button search-button" (click)="toggleInput()">
+                <i class="bi bi-search my-icon"></i>
+            </button>
+            <button class="my-button cart-button" [routerLink]="'/cart'">
+                <i class="bi bi-cart2 cart-icon my-icon"></i>
+            </button>
+        </div>
+        <div class="mobile-menu" *ngIf="showMobileMenu" (click)="toggleMobileMenu()">
+        </div>
+        <div class="mobile-menu-nav" *ngIf="showMobileMenu">
+
+        </div>
+    </nav>
+    <div class="mob-search-wrapper" *ngIf="showInput">
+        <div class="search-container">
+            <input class="search-input"
+                   id="search-input"
+                   type="text"
+                   placeholder="Buscar aquí producto"
+                   (keydown.enter)="search(txtQuery.value)"
+                   #txtQuery>
+            <button class="my-button mobile-search-button"
+                    (click)="search(txtQuery.value)"
+                    (click)="toggleInput()">
+                <i class="bi bi-search my-icon"></i>
+            </button>
+        </div>
+    </div>
 </header>

@@ -10,18 +10,52 @@
             </button>
         </div>
         <h2>Productos más buscados</h2>
-        <div class="row mwp-cards">
-            <button class="mwp-cell">
+        <div class="row mwp-cards" *ngIf="!isLoading">
+            <button class="mwp-button-cell" (click)="changeCards(-4)">
                 <i class="bi bi-chevron-compact-left"></i>
             </button>
-            <div class="mwp-cell" *ngFor="let product of mw_products">
-                <app-card [id]="product.id"
-                          [thumbnail]="product.thumbnail"
-                          [title]="product.title"
-                          [price]="product.price | currency : 'COP' : 'symbol-narrow' : '1.0-0'">
+            <button class="mwp-button-cell-mob" (click)="changeCards(-1)">
+                <i class="bi bi-chevron-compact-left"></i>
+            </button>
+            <div class="mwp-card">
+                <app-card [id]="mw_products[mobileIndex].id"
+                            [thumbnail]="mw_products[mobileIndex].thumbnail"
+                            [title]="mw_products[mobileIndex].title"
+                            [price]="mw_products[mobileIndex].price | currency : 'COP' : 'symbol-narrow' : '1.0-0'">
                 </app-card>
             </div>
-            <button class="mwp-cell">
+            <div class="mwp-card">
+                <app-card [id]="mw_products[mobileIndex + 1].id"
+                            [thumbnail]="mw_products[mobileIndex + 1].thumbnail"
+                            [title]="mw_products[mobileIndex + 1].title"
+                            [price]="mw_products[mobileIndex + 1].price | currency : 'COP' : 'symbol-narrow' : '1.0-0'">
+                </app-card>
+            </div>
+            <div class="mwp-card">
+                <app-card [id]="mw_products[mobileIndex + 2].id"
+                            [thumbnail]="mw_products[mobileIndex + 2].thumbnail"
+                            [title]="mw_products[mobileIndex + 2].title"
+                            [price]="mw_products[mobileIndex + 2].price | currency : 'COP' : 'symbol-narrow' : '1.0-0'">
+                </app-card>
+            </div>
+            <div class="mwp-card">
+                <app-card [id]="mw_products[mobileIndex + 3].id"
+                            [thumbnail]="mw_products[mobileIndex + 3].thumbnail"
+                            [title]="mw_products[mobileIndex + 3].title"
+                            [price]="mw_products[mobileIndex + 3].price | currency : 'COP' : 'symbol-narrow' : '1.0-0'">
+                </app-card>
+            </div>
+            <div class="mwp-card-mobile">
+                <app-card [id]="mw_products[mobileIndex].id"
+                          [thumbnail]="mw_products[mobileIndex].thumbnail"
+                          [title]="mw_products[mobileIndex].title"
+                          [price]="mw_products[mobileIndex].price | currency : 'COP' : 'symbol-narrow' : '1.0-0'">
+                </app-card>
+            </div>
+            <button class="mwp-button-cell" (click)="changeCards(4)">
+                <i class="bi bi-chevron-compact-right"></i>
+            </button>
+            <button class="mwp-button-cell-mob" (click)="changeCards(1)">
                 <i class="bi bi-chevron-compact-right"></i>
             </button>
         </div>

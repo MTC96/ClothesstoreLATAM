@@ -10,12 +10,13 @@
 .main-wrapper .my-container .category-container {
     width: 100%;
     display: flex;
+    justify-content: center;
     padding: 4%;
 }
 
 .main-wrapper .my-container .category-container button {
-    width: 46%;
-    margin-inline: auto;
+    width: auto;
+    margin: 2rem 1rem;
 }
 
 .main-wrapper .my-container .category-container button img {
@@ -35,9 +36,25 @@
     margin-inline: 0;
 }
 
-.main-wrapper .my-container .mwp-cards .mwp-cell {
+.main-wrapper .my-container .mwp-cards .mwp-card {
     flex: 0 0 auto;
-    width: 16.6666666667%;
+    width: 21%;
+}
+
+.main-wrapper .my-container .mwp-cards .mwp-card-mobile {
+    display: none;
+}
+
+.main-wrapper .my-container .mwp-cards .mwp-button-cell {
+    width: 8%;
+}
+
+.main-wrapper .my-container .mwp-cards .mwp-button-cell-mob {
+    display: none;
+}
+
+.main-wrapper .my-container .mwp-cards .mwp-button-cell .bi {
+    font-size: 90px;
 }
 
 button {
@@ -45,24 +62,42 @@ button {
     background-color: transparent;
     font-weight: bolder;
     color: #b3b3b3;
-    font-size: 90px;
 }
-
 
 button:focus {
     outline: 0;
 }
 
-@media all and (max-width: 992px) {
+@media all and (max-width: 1090px) {
     .category-container{
         flex-flow: column;
         padding: 1rem;
     }
+
     button {
         margin-bottom: 2rem;
     }
-    .mwp-card {
-        flex: 0 0 auto;
-        width: 100%;
+
+    .main-wrapper .my-container .mwp-cards .mwp-button-cell {
+        display: none;
+    }
+
+    .main-wrapper .my-container .mwp-cards .mwp-button-cell-mob {
+        display: block;
+        padding: 0;
+        width: 15%;
+    }
+
+    .main-wrapper .my-container .mwp-cards .mwp-button-cell-mob .bi {
+        font-size: 56px;
+    }
+
+    .main-wrapper .my-container .mwp-cards .mwp-card {
+        display: none;
+    }
+    
+    .main-wrapper .my-container .mwp-cards .mwp-card-mobile {
+        display: block;
+        width: 70%;
     }
 }

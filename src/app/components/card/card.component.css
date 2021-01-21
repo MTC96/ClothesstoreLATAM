@@ -1,6 +1,7 @@
 .card {
-    max-width: 250px;
+    max-width: 280px;
     margin: auto;
+    padding: 0 1rem;
     border: 0;
     display: flex;
     flex-flow: column;
@@ -45,4 +46,18 @@
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 9px 13px #b6b6b6;
+}
+
+@media all and (max-width: 1090px) {
+    .card {
+        max-width: 320px;
+        margin: auto;
+        padding: 0 1rem;
+        border: 0;
+        display: flex;
+        flex-flow: column;
+        height: 515px;
+        overflow: hidden;
+        transition: all .2s;
+    }
 }

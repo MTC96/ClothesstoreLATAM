@@ -42,7 +42,7 @@ button:focus {
     min-width: 129px;
     font-size: 25px;
     padding: 0;
-    margin-inline: auto;
+    margin: 0 auto;
     transition: all .2s;
 }
 
@@ -55,10 +55,14 @@ button:focus {
     display: flex;
 }
 
-img {
+.banner-desk {
     width: 100%;
     object-fit: contain;
-    margin-inline: -142px;
+    margin: 0 -142px;
+}
+
+.banner-mobile {
+    display: none;
 }
 
 .carousel-button {
@@ -67,7 +71,7 @@ img {
     font-size: 130px;
 }
 
-@media all and (max-width: 992px){
+@media all and (max-width: 1090px){
     .main-wrapper {
         width: 100%;
     }
@@ -77,14 +81,32 @@ img {
         padding: 0;
     }
 
+    .my-header {
+        display: none;
+    }
+
+    .banner-desk {
+        display: none;
+    }
+
+    .banner-mobile {
+        display: block;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .carousel-button {
+        display: none;
+    }
+
     .buttons-container {
-        margin-inline: auto;
+        margin: 0 auto;
         text-align: center;
     }
 
     .header-button {
         font-size: 20px;
-        padding-inline: 25px;
+        padding: 0 25px;
     }
 
 }
