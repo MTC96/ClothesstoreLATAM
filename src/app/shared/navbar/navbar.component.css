@@ -119,6 +119,21 @@
         padding: 4px;
     }
 
+    .menu-nav-container {
+        width: 100%;
+    }
+
+    .my-nav-button {
+        width: 80%;
+        border: 0px;
+        padding: 0;
+        margin: 1rem;
+        text-align: start;
+        font-weight: bolder;
+        background-color: transparent;
+        transition: all .17s;
+    }
+
     .burger-button {
         display: flex;
         width: 14%;
@@ -129,7 +144,6 @@
     .burger-icon {
         width: 100%;
         font-size: 3rem;
-        /* padding-top: .4rem; */
     }
 
     .search-button {
@@ -184,9 +198,11 @@
         background-color: white;
         width: 80vw;
         height: 100vh;
+        padding-left: 2rem;
+        padding-top: 2rem;
         z-index: 101;
         top: 0;
-        left: -32px;
+        left: -20px;
     }
 
     .mob-search-wrapper {
