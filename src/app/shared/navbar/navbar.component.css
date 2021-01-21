@@ -121,15 +121,15 @@
 
     .burger-button {
         display: flex;
+        width: 14%;
         align-items: center;
         padding: 10px 0;
     }
 
     .burger-icon {
-        display: flex;
-        align-items: center;
+        width: 100%;
         font-size: 3rem;
-        padding-top: .4rem;
+        /* padding-top: .4rem; */
     }
 
     .search-button {
@@ -176,7 +176,7 @@
         background-color: rgba(0, 0, 0, .5);
         z-index: 100;
         top: 0;
-        left: -32px;
+        left: -11px;
     }
 
     .mobile-menu-nav {
