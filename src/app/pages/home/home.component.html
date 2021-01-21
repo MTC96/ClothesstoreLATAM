@@ -1,6 +1,6 @@
 <app-carousel></app-carousel>
 <div class="main-wrapper">
-    <div class="container-fluid">
+    <div class="container-fluid my-container">
         <div class="category-container">
             <button>
                 <img src="/assets/images/banner-moda-infantil.jpg" alt="">
@@ -9,23 +9,21 @@
                 <img src="/assets/images/banner-deportivo.jpg" alt="">
             </button>
         </div>
-        <h2>PRODUCTOS MÁS BUSCADOS</h2>
-        <div class="mwp-container">
-            <div class="row mwp-cards">
-                <button class="mwp-button">
-                    <i class="bi bi-chevron-compact-left"></i>
-                </button>
-                <div class="mwp-card" *ngFor="let product of mw_products">
-                    <app-card [id]="product.id"
-                              [thumbnail]="product.thumbnail"
-                              [title]="product.title"
-                              [price]="product.price | currency : 'COP' : 'symbol-narrow' : '1.0-0'">
-                    </app-card>
-                </div>
-                <button class="mwp-button">
-                    <i class="bi bi-chevron-compact-right"></i>
-                </button>
+        <h2>Productos más buscados</h2>
+        <div class="row mwp-cards">
+            <button class="mwp-cell">
+                <i class="bi bi-chevron-compact-left"></i>
+            </button>
+            <div class="mwp-cell" *ngFor="let product of mw_products">
+                <app-card [id]="product.id"
+                          [thumbnail]="product.thumbnail"
+                          [title]="product.title"
+                          [price]="product.price | currency : 'COP' : 'symbol-narrow' : '1.0-0'">
+                </app-card>
             </div>
+            <button class="mwp-cell">
+                <i class="bi bi-chevron-compact-right"></i>
+            </button>
         </div>
     </div>
 </div>

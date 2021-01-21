@@ -1,22 +1,23 @@
+.main-wrapper {
+    width: 100%;
+}
+
 .my-container {
+    width: 100%;
     padding: 0;
 }
 
 .my-header {
+    width: 100%;
     background-color: #000000;
     padding: 14px;
 }
 
 .buttons-container {
+    width: 70%;
+    min-width: 783px;
     display: flex;
-    margin-inline: 20rem;
-}
-
-@media (max-width: 991px) {
-    .buttons-container {
-        margin-inline: 5rem;
-        text-align: center;
-    }
+    margin-inline: auto;
 }
 
 .button-divider {
@@ -37,16 +38,12 @@ button:focus {
 }
 
 .header-button {
+    width: 14%;
+    min-width: 129px;
     font-size: 25px;
-    padding-inline: 40px;
+    padding: 0;
+    margin-inline: auto;
     transition: all .2s;
-}
-
-@media (max-width: 991px) {
-    .header-button {
-        font-size: 20px;
-        padding-inline: 25px;
-    }
 }
 
 .header-button:hover {
@@ -54,6 +51,7 @@ button:focus {
 }
 
 .my-carousel {
+    width: 100%;
     display: flex;
 }
 
@@ -67,4 +65,26 @@ img {
     position: relative;
     z-index: 5px;
     font-size: 130px;
+}
+
+@media all and (max-width: 992px){
+    .main-wrapper {
+        width: 100%;
+    }
+
+    .my-container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .buttons-container {
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    .header-button {
+        font-size: 20px;
+        padding-inline: 25px;
+    }
+
 }

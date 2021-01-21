@@ -1,7 +1,7 @@
-<div class="container-fluid">
+<div class="container-fluid my-container">
     <app-paginator (offsetOut)="loadProductsByQuery(query, $event)">
     </app-paginator>
-    <div class="row">
+    <div class="row products-cont">
         <div class="card-cont" *ngFor="let product of products">
             <app-card [id]="product.id"
                       [thumbnail]="product.thumbnail"

@@ -1,15 +1,25 @@
 .my-topbar {
+    width: 100%;
     padding-inline: 6rem;
 }
 
+.navbar-brand {
+    width: 27%;
+}
+
 .my-logo {
-    width: 380px;
-    height: 90px;
+    min-width: 380px;
+    min-height: 90px;
+}
+
+.navbar-collapse {
+    width: 73%;
 }
 
 .search-container {
+    width: 50%;
     display: flex;
-    margin-left: 7rem;
+    margin-left: 10%;
 }
 
 .search-input {
@@ -20,7 +30,7 @@
     padding-left: 25px;
     padding-right: 60px;
     margin-right: -60px;
-    width: 37rem;
+    width: 100%;
     font-size: 30px;
 }
 
@@ -68,8 +78,8 @@
 }
 
 .cart-button {
+    width: 6%;
     margin-left: auto;
-    margin-right: 1rem;
 }
 
 .login-icon {
@@ -77,8 +87,12 @@
 }
 
 .login-button {
+    min-width: 20%;
     font-size: 25px;
     color: #6b6b6b;
-    margin-right: 1rem;
+    margin-inline: 1%;
 }
 
+@media all and (max-width: 991px) {
+
+}

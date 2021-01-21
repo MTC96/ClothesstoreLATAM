@@ -1,3 +1,8 @@
+.min-height {
+    width: 100%;
+    min-height: 82vh;
+}
+
 .soft-border {
     border-left: 1px solid;
     border-image:
@@ -11,10 +16,6 @@
 
 .text.my-shipping {
     color: rgb(79, 197, 0);
-}
-
-.min-height {
-    min-height: 82vh;
 }
 
 .height {

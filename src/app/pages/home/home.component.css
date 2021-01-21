@@ -1,49 +1,43 @@
-.category-container {
+.main-wrapper {
+    width: 100%;
+}
+
+.main-wrapper .my-container {
+    width: 100%;
+    padding: 0;
+}
+
+.main-wrapper .my-container .category-container {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    padding: 5rem;
+    padding: 4%;
 }
 
-@media (max-width: 992px) {
-    .category-container{
-        flex-flow: column;
-        padding: 1rem;
-    }
+.main-wrapper .my-container .category-container button {
+    width: 46%;
+    margin-inline: auto;
 }
 
-.mwp-container {
-    display: flex;
+.main-wrapper .my-container .category-container button img {
+    width: 100%;
+    object-fit: contain;
 }
 
-.mwp-cards {
-    margin-block: 3rem;
-}
-
-.mwp-button {
-    flex: 0 0 auto;
-    width: 16.6666666667%;
-}
-
-.mwp-card {
-    flex: 0 0 auto;
-    width: 16.6666666667%;
-}
-
-@media (max-width: 992px) {
-    .mwp-card {
-        flex: 0 0 auto;
-        width: 100%;
-    }
-}
-
-h2 {
+.main-wrapper .my-container h2 {
+    text-transform: uppercase;
     text-align: center;
     font-weight: bolder;
 }
 
-img {
-    object-fit: contain;
-    max-width: 44rem;
+.main-wrapper .my-container .mwp-cards {
+    width: 100%;
+    margin-block: 3rem;
+    margin-inline: 0;
+}
+
+.main-wrapper .my-container .mwp-cards .mwp-cell {
+    flex: 0 0 auto;
+    width: 16.6666666667%;
 }
 
 button {
@@ -54,12 +48,21 @@ button {
     font-size: 90px;
 }
 
-@media (max-width: 992px) {
-    button {
-        margin-bottom: 2rem;
-    }
-}
 
 button:focus {
     outline: 0;
+}
+
+@media all and (max-width: 992px) {
+    .category-container{
+        flex-flow: column;
+        padding: 1rem;
+    }
+    button {
+        margin-bottom: 2rem;
+    }
+    .mwp-card {
+        flex: 0 0 auto;
+        width: 100%;
+    }
 }
