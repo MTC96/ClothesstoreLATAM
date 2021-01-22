@@ -48,6 +48,9 @@
         </div>
         <div class="mobile-menu-nav" *ngIf="showMobileMenu">
             <div class="menu-nav-container">
+                <button class="close-nav-button" (click)="toggleMobileMenu()">
+                    <img src="/assets/images/icon-cancel.svg" class="my'close-icon" alt="Clothes Store">
+                </button>
                 <button class="my-nav-button">Hombre</button>
                 <button class="my-nav-button">Mujer</button>
                 <button class="my-nav-button">Junior</button>
