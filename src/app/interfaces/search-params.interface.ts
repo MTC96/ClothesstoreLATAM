@@ -1,4 +1,5 @@
 export interface SearchParams {
-    query: string,
+    query: string;
     offset: number;
+    page: number;
 }

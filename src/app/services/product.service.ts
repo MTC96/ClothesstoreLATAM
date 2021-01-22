@@ -17,7 +17,8 @@ export class ProductService {
 
   searchParams : SearchParams = {
     query: 'jeans',
-    offset: 0
+    offset: 0,
+    page: 1,
   }
 
   cartArray: any[] = [];

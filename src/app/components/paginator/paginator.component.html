@@ -1,16 +1,16 @@
 <div class="row">
     <div class="pag-cont">
-        <button class="btn disabled" *ngIf="page==1">
+        <button class="btn disabled" *ngIf="this.productService.searchParams.page==1">
             <i class="bi bi-arrow-left-short d-flex align-items-center"></i>
         </button>
-        <button (click)="changePage(-1)" class="btn" *ngIf="page!=1">
+        <button (click)="changePage(-1)" class="btn" *ngIf="this.productService.searchParams.page!=1">
             <i class="bi bi-arrow-left-short d-flex align-items-center"></i>
         </button>
-        <button class="btn disabled my-btn">{{ page }}</button>
-        <button class="btn disabled" *ngIf="page==51">
+        <button class="btn disabled my-btn">{{ this.productService.searchParams.page }}</button>
+        <button class="btn disabled" *ngIf="this.productService.searchParams.page==51">
             <i class="bi bi-arrow-right-short d-flex align-items-center"></i>
         </button>
-        <button (click)="changePage(1)" class="btn" *ngIf="page!=51">
+        <button (click)="changePage(1)" class="btn" *ngIf="this.productService.searchParams.page!=51">
             <i class="bi bi-arrow-right-short d-flex align-items-center"></i>
         </button>
     </div>

@@ -12,13 +12,13 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class PaginatorComponent implements OnInit, OnDestroy {
 
-  page: number = 1;
+  page: number = this.productService.searchParams.page;
   query: string = this.productService.searchParams.query;
   querySubs: Subscription;
   
   @Output() offsetOut: EventEmitter<number> = new EventEmitter();
 
-  constructor(private productService: ProductService) { }
+  constructor(public productService: ProductService) { }
 
 
   ngOnInit(): void {
@@ -35,9 +35,9 @@ export class PaginatorComponent implements OnInit, OnDestroy {
       this.productService.searchParams.offset -= value * 20;
     }
     if (value < 0) {
-      this.page -= 1;
+      this.productService.searchParams.page -= 1;
     } else if (value > 0){
-      this.page += 1;
+      this.productService.searchParams.page += 1;
     }
     this.offsetOut.emit(this.productService.searchParams.offset);
   }
@@ -52,7 +52,7 @@ export class PaginatorComponent implements OnInit, OnDestroy {
       if (resp.query != this.query && resp.query.length != 0) {
         this.query = resp.query;
         this.productService.searchParams.offset = 0;
-        this.page = 1;
+        this.productService.searchParams.page = 1;
       }
     });
   }
