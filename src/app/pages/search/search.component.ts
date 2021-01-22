@@ -13,14 +13,12 @@ export class SearchComponent implements OnInit, OnDestroy {
 
   public totalResults: number = 0;
   public products: Product[] = [];
-  public filteredProducts: Product[] = [];
 
   constructor(public productService: ProductService) { }
 
 
   query: string = this.productService.searchParams.query;
   querySubs: Subscription;
-  childrenCategories: any[] = this.productService.childrenCategories;
 
   ngOnInit(): void {
     if (this.query == '') {
@@ -35,23 +33,13 @@ export class SearchComponent implements OnInit, OnDestroy {
   }
 
   loadProductsByQuery(q: string, offset: number = 0) {
-    this.filteredProducts = [];
+    this.productService.searchParams.offset = offset;
     this.productService.loadProductsByQuery(q, offset)
-      .subscribe(({ paging: { total }, results }) => {
-        this.totalResults = total;
-        let filteredFull: boolean = false;
+      .subscribe(({ results }) => {
         results.map(product => {
           product.thumbnail = product.thumbnail.replace('-I.', '-V.');
-          let categoryFlag: boolean = this.childrenCategories.includes(product.category_id);
-          if (categoryFlag && !filteredFull) {
-            this.filteredProducts.push(product);
-            if (this.filteredProducts.length == 20) {
-              filteredFull = true;
-              this.productService.searchParams.offset += results.indexOf(product);
-            }
-          }
         });
-        this.products = this.filteredProducts;
+        this.products = results;
       });
   }
 

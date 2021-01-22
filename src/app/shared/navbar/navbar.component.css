@@ -134,6 +134,10 @@
         transition: all .17s;
     }
 
+    .my-nav-button:focus {
+        outline: 0;
+    }
+
     .burger-button {
         display: flex;
         width: 14%;
@@ -149,16 +153,23 @@
     .search-button {
         width: 9%;
         min-width: 33px;
-        height: auto;
+        height: 6rem;
         margin-left: 1rem;
     }
 
     .my-icon {
+        display: flex;
+        align-items: center;
+        margin: auto;
         font-size: 25px;
     }
 
     .cart-icon {
+        display: flex;
+        align-items: center;
+        margin: auto;
         font-size: 28px;
+        padding-bottom: .13rem;
     }
 
     .mobile-search-button {
@@ -178,8 +189,10 @@
     }
 
     .cart-button {
+        width: 10%;
+        min-width: 38px;
+        height: 6rem;
         margin-left: 0;
-        height: auto;
     }
 
     .mobile-menu {

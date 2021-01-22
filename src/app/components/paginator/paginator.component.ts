@@ -12,7 +12,6 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class PaginatorComponent implements OnInit, OnDestroy {
 
-  offsetArr: number[] = [0];
   page: number = 1;
   query: string = this.productService.searchParams.query;
   querySubs: Subscription;
@@ -31,13 +30,9 @@ export class PaginatorComponent implements OnInit, OnDestroy {
   }
 
   changePage(value: number) {
-    const offset: number = this.productService.searchParams.offset;
-    if (!this.offsetArr.includes(offset)) {
-      this.offsetArr.push(offset);
-    }
-    this.productService.searchParams.offset = this.offsetArr[this.page - 1 + value];
+    this.productService.searchParams.offset += value * 20;
     if (this.productService.searchParams.offset > 1000) {
-      this.productService.searchParams.offset = this.offsetArr[this.page - 1];
+      this.productService.searchParams.offset -= value * 20;
     }
     if (value < 0) {
       this.page -= 1;
@@ -58,7 +53,6 @@ export class PaginatorComponent implements OnInit, OnDestroy {
         this.query = resp.query;
         this.productService.searchParams.offset = 0;
         this.page = 1;
-        this.offsetArr = [0];
       }
     });
   }
