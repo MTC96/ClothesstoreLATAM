@@ -1,5 +1,6 @@
 .row {
     margin-block: 1rem;
+    width: 100%;
 }
 
 .row .pag-cont {
