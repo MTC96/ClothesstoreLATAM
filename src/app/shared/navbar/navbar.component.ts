@@ -12,16 +12,19 @@ export class NavbarComponent implements OnInit {
 
   public showInput = false;
   public showMobileMenu = false;
-
+  
   constructor(private productService: ProductService,
               private router: Router) { }
 
+    public queryInput: string = this.productService.searchParams.query;
+    
   ngOnInit(): void {
   }
 
   search(query: string) {
     this.router.navigateByUrl('/search');
     this.productService.searchParams.query = query;
+    this.queryInput = '';
   }
 
   toggleInput() {

@@ -16,7 +16,7 @@ const url_base = environment.url_base;
 export class ProductService {
 
   searchParams : SearchParams = {
-    query: 'jeans',
+    query: '',
     offset: 0,
     page: 1,
   }

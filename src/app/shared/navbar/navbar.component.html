@@ -10,10 +10,10 @@
                            id="search-input"
                            type="text"
                            placeholder="Buscar aquí producto"
-                           (keydown.enter)="search(txtQuery.value)"
-                           #txtQuery>
+                           (keydown.enter)="search(queryInput)"
+                           [(ngModel)]="queryInput">
                     <button class="my-button search-button"
-                            (click)="search(txtQuery.value)">
+                            (click)="search(queryInput)">
                         <i class="bi bi-search my-icon"></i>
                     </button>
                 </div>
@@ -66,10 +66,10 @@
                    id="search-input"
                    type="text"
                    placeholder="Buscar aquí producto"
-                   (keydown.enter)="search(txtQuery.value)"
-                   #txtQuery>
+                   (keydown.enter)="search(queryInput)"
+                   [(ngModel)]="queryInput">
             <button class="my-button mobile-search-button"
-                    (click)="search(txtQuery.value)"
+                    (click)="search(queryInput)"
                     (click)="toggleInput()">
                 <i class="bi bi-search my-icon"></i>
             </button>
